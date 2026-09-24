@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger {
+    cursor: pointer;
+    width: 70px;
+    height: 60px;
+    border: none;
+    background: transparent;
+    padding: 0;
+    position: relative;
+
+    span {
+        display: block;
+        width: 70px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: black;
+        margin-bottom: 10px;
+
+        &:nth-child(1) {
+            animation: bar-top-close 0.75s forwards;
+        }
+
+        &:nth-child(2) {
+            animation: bar-middle-close 0.75s forwards;
+        }
+
+        &:nth-child(3) {
+            animation: bar-bottom-close 0.75s forwards;
+        }
+    }
+
+    &.active {
+        span {
+            &:nth-child(1) {
+                animation: bar-top-open 0.75s forwards;
+            }
+
+            &:nth-child(2) {
+                animation: bar-middle-open 0.75s forwards;
+            }
+
+            &:nth-child(3) {
+                animation: bar-bottom-open 0.75s forwards;
+            }
+        }
+    }
+}
+
+
+@keyframes bar-top-open {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(0, 20px, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0, 20px, 0) rotate(45deg);
+    }
+}
+
+
+@keyframes bar-top-close {
+    0% {
+        transform: translate3d(0, 20px, 0) rotate(45deg);
+    }
+
+    50% {
+        transform: translate3d(0, 20px, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+
+@keyframes bar-middle-open {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+@keyframes bar-middle-close {
+    0% {
+        transform: scale(0);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes bar-bottom-open {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(0, -20px, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0, -20px, 0) rotate(-45deg);
+    }
+}
+
+
+@keyframes bar-bottom-close {
+    0% {
+        transform: translate3d(0, -20px, 0) rotate(-45deg);
+    }
+
+    50% {
+        transform: translate3d(0, -20px, 0) rotate(0deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
