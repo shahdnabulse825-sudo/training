@@ -1,54 +1,34 @@
 const form = document.getElementById("myForm");
-
 form.addEventListener("submit", function (event) {
 
     event.preventDefault();
-
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    if (email === "") {
-        alert("please enter your email");
-        return;
-    }
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email)) {
+    if (email == "") {
+        alert("please enter your email"); }
+    else if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
         alert("please enter a valid email");
-        return;
     }
-
-    if (password === "") {
+    else if (password == "") {
         alert("please enter your password");
-        return;
     }
-
-    if (password.length < 8) {
-        alert("Password must be 8 characters at least");
-        return;
+    else if (password.length < 8) {
+        alert("password must be 8 characters at least");
     }
-
-    if (!/[A-Z]/.test(password)) {
+    else if (!/[A-Z]/.test(password)) {
         alert("please enter one capital letter at least");
-        return;
     }
-
-    if (!/[a-z]/.test(password)) {
+    else if (!/[a-z]/.test(password)) {
         alert("please enter one small letter at least");
-        return;
     }
-
-    if (!/[0-9]/.test(password)) {
+    else if (!/[0-9]/.test(password)) {
         alert("please enter one digit at least");
-        return;
     }
-
-    if (!/[!@#$%^&*]/.test(password)) {
-        alert("please enter one special character at least");
-        return;
+    else if (!/[!@#$%^&*]/.test(password)) {
+        alert("please enter one special character at least"); }
+    else {
+        alert("Done");
     }
-
-    alert("Form submitted successfully");
-
 });
+
