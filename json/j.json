@@ -1,0 +1,22 @@
+{
+    "Brown": {
+        "38": true,
+        "39": false,
+        "40": true
+    },
+    "Black": {
+        "38": true,
+        "39": true,
+        "40": true
+    },
+    "Nude": {
+        "38": false,
+        "39": false,
+        "40": true
+    },
+    "white": {
+        "38": true,
+        "39": true,
+        "40": false
+    }
+}
