@@ -1,0 +1,49 @@
+:root {
+    --red: red;
+    --gray: gray;
+    --purple: purple;
+    --brown: brown;
+    --yellow: yellow;
+    --black: black;
+}
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    }
+.section {
+    text-align: center;
+}
+.container {
+    width: 200px;
+    height: 230px;
+    border: 4px solid var(--black);
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 15px;
+}
+.box {
+    width: 52px;
+    height: 52px;
+    border: 4px solid;
+}
+.box-red {
+    border-color: var(--red);
+}
+.box-gray {
+    border-color: var(--gray);
+}
+.box-purple {
+    border-color: var(--purple);
+}
+.box-brown {
+    border-color: var(--brown);
+}
+.box-yellow {
+    border-color: var(--yellow);
+}
+button {
+    margin-top: 8px;
+}
