@@ -1,7 +1,6 @@
 .main {
     width: 600px;
     margin: 30px auto;
-    font-family: Arial, sans-serif;
 }
 .search_box input {
     width: 400px;
@@ -9,15 +8,13 @@
 }
 .search_box button {
     padding: 6px 12px;
-}
-#results_list {
-    list-style: none;
-    padding: 0;
+    background-color: lightpink;
 }
 #results_list li {
     margin-bottom: 15px;
+     list-style:none ;
 }
 #results_list a {
     font-size: 18px;
-    color: #1a0dab;
+    color: blue;
 }
