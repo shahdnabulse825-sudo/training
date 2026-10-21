@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const url = "https://en.wikipedia.org/w/api.php";
+    const API = "https://en.wikipedia.org/w/api.php";
     const box = $("#search_input");
     const list = $("#results_list");
     $("#search_button").click(function () {
@@ -16,7 +16,7 @@ $(document).ready(function () {
         minLength: 3,
         source: function (request, response) {
             $.ajax({
-                url: url,
+                url: API,
                 data: {
                     action: "opensearch",
                     search: request.term,
@@ -36,7 +36,7 @@ $(document).ready(function () {
         }
         list.empty();
         $.ajax({
-            url: url,
+            url: API,
             data: {
                 action: "query",
                 list: "search",
