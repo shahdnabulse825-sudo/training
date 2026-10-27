@@ -8,24 +8,19 @@
     padding: 10px;
     background-color: beige;
 }
-
 #search_button {
     padding: 10px 12px;
     background-color: rgb(164, 212, 239);
 }
-
 #message {
     color: red;
 }
-
 .user_row {
     display: flex;
     gap: 10px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    padding: 10px; 
 }
-
 .user_row img {
     width: 100px;
     height: 100px;

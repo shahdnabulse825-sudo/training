@@ -19,26 +19,22 @@ const showuser = (data, username) => {
   if (data.email !== null) {
     info += `<p>Email: ${data.email}</p>`;
   }
-
   info += `<p>Followers: ${data.followers}</p>`;
   info += `<p>Following: ${data.following}</p>`;
   info += `<p>Public repos: ${data.public_repos}</p>`;
-
   row.innerHTML = `<img src="${data.avatar_url}"><div>${info}</div>`;
   usersList.appendChild(row);
 };
 
 const searchUser = () => {
-  const username = usernameinput.value.toLowerCase();
-
+  const username = usernameinput.value.trim().toLowerCase();
   if (username === '') {
     return;
   }
 
-  const oldRow = document.querySelector(`#user_${username}`);
-
-  if (oldRow !== null) {
-    oldRow.scrollIntoView({ behavior: 'smooth' });
+  const oldrow = document.querySelector(`#user_${username}`);
+  if (oldrow !== null) {
+    oldrow.scrollintoview({ behavior: 'smooth' });
     return;
   }
 
